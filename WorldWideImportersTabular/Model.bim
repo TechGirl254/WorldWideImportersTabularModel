@@ -1,0 +1,1644 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-NZ",
+    "dataSources": [
+      {
+        "name": "WideWorldImportersDW",
+        "connectionString": "Provider=SQLNCLI11;Data Source=ANU-SURFACE3\\SQL2016;Initial Catalog=WideWorldImportersDW;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "ANU-SURFACE3\\Shantha05",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "City",
+        "columns": [
+          {
+            "name": "City Key",
+            "dataType": "int64",
+            "sourceColumn": "City Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI City ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI City ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "State Province",
+            "dataType": "string",
+            "sourceColumn": "State Province",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Continent",
+            "dataType": "string",
+            "sourceColumn": "Continent",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Sales Territory",
+            "dataType": "string",
+            "sourceColumn": "Sales Territory",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Subregion",
+            "dataType": "string",
+            "sourceColumn": "Subregion",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Location",
+            "dataType": "string",
+            "sourceColumn": "Location",
+            "sourceProviderType": "132"
+          },
+          {
+            "name": "Latest Recorded Population",
+            "dataType": "int64",
+            "sourceColumn": "Latest Recorded Population",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "Valid From",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid From",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Valid To",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid To",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "City",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Dimension].[City].* FROM [Dimension].[City] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Dimension].[City].* FROM [Dimension].[City] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "City"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Dimension"
+          }
+        ]
+      },
+      {
+        "name": "Customer",
+        "columns": [
+          {
+            "name": "Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Customer Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Customer ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Customer ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Customer",
+            "dataType": "string",
+            "sourceColumn": "Customer",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Bill To Customer",
+            "dataType": "string",
+            "sourceColumn": "Bill To Customer",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Category",
+            "dataType": "string",
+            "sourceColumn": "Category",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Buying Group",
+            "dataType": "string",
+            "sourceColumn": "Buying Group",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Primary Contact",
+            "dataType": "string",
+            "sourceColumn": "Primary Contact",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Postal Code",
+            "dataType": "string",
+            "sourceColumn": "Postal Code",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Valid From",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid From",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Valid To",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid To",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Customer",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Dimension].[Customer].* FROM [Dimension].[Customer] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Dimension].[Customer].* FROM [Dimension].[Customer] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Customer"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Dimension"
+          }
+        ]
+      },
+      {
+        "name": "Date",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Day Number",
+            "dataType": "int64",
+            "sourceColumn": "Day Number",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Day",
+            "dataType": "string",
+            "sourceColumn": "Day",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Short Month",
+            "dataType": "string",
+            "sourceColumn": "Short Month",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Calendar Month Number",
+            "dataType": "int64",
+            "sourceColumn": "Calendar Month Number",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Calendar Month Label",
+            "dataType": "string",
+            "sourceColumn": "Calendar Month Label",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Calendar Year",
+            "dataType": "int64",
+            "sourceColumn": "Calendar Year",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Calendar Year Label",
+            "dataType": "string",
+            "sourceColumn": "Calendar Year Label",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Fiscal Month Number",
+            "dataType": "int64",
+            "sourceColumn": "Fiscal Month Number",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Fiscal Month Label",
+            "dataType": "string",
+            "sourceColumn": "Fiscal Month Label",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Fiscal Year",
+            "dataType": "int64",
+            "sourceColumn": "Fiscal Year",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Fiscal Year Label",
+            "dataType": "string",
+            "sourceColumn": "Fiscal Year Label",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ISO Week Number",
+            "dataType": "int64",
+            "sourceColumn": "ISO Week Number",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Date",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Dimension].[Date].* FROM [Dimension].[Date] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Dimension].[Date].* FROM [Dimension].[Date] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Date"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Dimension"
+          }
+        ]
+      },
+      {
+        "name": "Employee",
+        "columns": [
+          {
+            "name": "Employee Key",
+            "dataType": "int64",
+            "sourceColumn": "Employee Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Employee ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Employee ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Employee",
+            "dataType": "string",
+            "sourceColumn": "Employee",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Preferred Name",
+            "dataType": "string",
+            "sourceColumn": "Preferred Name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Is Salesperson",
+            "dataType": "boolean",
+            "sourceColumn": "Is Salesperson",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          },
+          {
+            "name": "Valid From",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid From",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Valid To",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid To",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Employee",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Dimension].[Employee].* FROM [Dimension].[Employee] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Dimension].[Employee].* FROM [Dimension].[Employee] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Employee"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Dimension"
+          }
+        ]
+      },
+      {
+        "name": "Payment Method",
+        "columns": [
+          {
+            "name": "Payment Method Key",
+            "dataType": "int64",
+            "sourceColumn": "Payment Method Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Payment Method ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Payment Method ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Payment Method",
+            "dataType": "string",
+            "sourceColumn": "Payment Method",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Valid From",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid From",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Valid To",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid To",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Payment Method",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Dimension].[Payment Method].* FROM [Dimension].[Payment Method] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Dimension].[Payment Method].* FROM [Dimension].[Payment Method] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Payment Method"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Dimension"
+          }
+        ]
+      },
+      {
+        "name": "Stock Item",
+        "columns": [
+          {
+            "name": "Stock Item Key",
+            "dataType": "int64",
+            "sourceColumn": "Stock Item Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Stock Item ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Stock Item ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Stock Item",
+            "dataType": "string",
+            "sourceColumn": "Stock Item",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Color",
+            "dataType": "string",
+            "sourceColumn": "Color",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Selling Package",
+            "dataType": "string",
+            "sourceColumn": "Selling Package",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Buying Package",
+            "dataType": "string",
+            "sourceColumn": "Buying Package",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Brand",
+            "dataType": "string",
+            "sourceColumn": "Brand",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Size",
+            "dataType": "string",
+            "sourceColumn": "Size",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Lead Time Days",
+            "dataType": "int64",
+            "sourceColumn": "Lead Time Days",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Quantity Per Outer",
+            "dataType": "int64",
+            "sourceColumn": "Quantity Per Outer",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Is Chiller Stock",
+            "dataType": "boolean",
+            "sourceColumn": "Is Chiller Stock",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          },
+          {
+            "name": "Barcode",
+            "dataType": "string",
+            "sourceColumn": "Barcode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Tax Rate",
+            "dataType": "double",
+            "sourceColumn": "Tax Rate",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Unit Price",
+            "dataType": "double",
+            "sourceColumn": "Unit Price",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Recommended Retail Price",
+            "dataType": "double",
+            "sourceColumn": "Recommended Retail Price",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Typical Weight Per Unit",
+            "dataType": "double",
+            "sourceColumn": "Typical Weight Per Unit",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Valid From",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid From",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Valid To",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid To",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Stock Item",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Dimension].[Stock Item].* FROM [Dimension].[Stock Item] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Dimension].[Stock Item].* FROM [Dimension].[Stock Item] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Stock Item"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Dimension"
+          }
+        ]
+      },
+      {
+        "name": "Supplier",
+        "columns": [
+          {
+            "name": "Supplier Key",
+            "dataType": "int64",
+            "sourceColumn": "Supplier Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Supplier ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Supplier ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Supplier",
+            "dataType": "string",
+            "sourceColumn": "Supplier",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Category",
+            "dataType": "string",
+            "sourceColumn": "Category",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Primary Contact",
+            "dataType": "string",
+            "sourceColumn": "Primary Contact",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Supplier Reference",
+            "dataType": "string",
+            "sourceColumn": "Supplier Reference",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Payment Days",
+            "dataType": "int64",
+            "sourceColumn": "Payment Days",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Postal Code",
+            "dataType": "string",
+            "sourceColumn": "Postal Code",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Valid From",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid From",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Valid To",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid To",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Supplier",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Dimension].[Supplier].* FROM [Dimension].[Supplier] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Dimension].[Supplier].* FROM [Dimension].[Supplier] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Supplier"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Dimension"
+          }
+        ]
+      },
+      {
+        "name": "Transaction Type",
+        "columns": [
+          {
+            "name": "Transaction Type Key",
+            "dataType": "int64",
+            "sourceColumn": "Transaction Type Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Transaction Type ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Transaction Type ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Transaction Type",
+            "dataType": "string",
+            "sourceColumn": "Transaction Type",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Valid From",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid From",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Valid To",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid To",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Transaction Type",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Dimension].[Transaction Type].* FROM [Dimension].[Transaction Type] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Dimension].[Transaction Type].* FROM [Dimension].[Transaction Type] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Transaction Type"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Dimension"
+          }
+        ]
+      },
+      {
+        "name": "Movement",
+        "columns": [
+          {
+            "name": "Movement Key",
+            "dataType": "int64",
+            "sourceColumn": "Movement Key",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "Date Key",
+            "dataType": "dateTime",
+            "sourceColumn": "Date Key",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Stock Item Key",
+            "dataType": "int64",
+            "sourceColumn": "Stock Item Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Customer Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Supplier Key",
+            "dataType": "int64",
+            "sourceColumn": "Supplier Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Transaction Type Key",
+            "dataType": "int64",
+            "sourceColumn": "Transaction Type Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Stock Item Transaction ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Stock Item Transaction ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Invoice ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Invoice ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Purchase Order ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Purchase Order ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Movement",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Fact].[Movement].* FROM [Fact].[Movement] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Fact].[Movement].* FROM [Fact].[Movement] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Movement"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Fact"
+          }
+        ]
+      },
+      {
+        "name": "Order",
+        "columns": [
+          {
+            "name": "Order Key",
+            "dataType": "int64",
+            "sourceColumn": "Order Key",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "City Key",
+            "dataType": "int64",
+            "sourceColumn": "City Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Customer Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Stock Item Key",
+            "dataType": "int64",
+            "sourceColumn": "Stock Item Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Order Date Key",
+            "dataType": "dateTime",
+            "sourceColumn": "Order Date Key",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Picked Date Key",
+            "dataType": "dateTime",
+            "sourceColumn": "Picked Date Key",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Salesperson Key",
+            "dataType": "int64",
+            "sourceColumn": "Salesperson Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Picker Key",
+            "dataType": "int64",
+            "sourceColumn": "Picker Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Order ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Order ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Backorder ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Backorder ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Package",
+            "dataType": "string",
+            "sourceColumn": "Package",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Unit Price",
+            "dataType": "double",
+            "sourceColumn": "Unit Price",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Tax Rate",
+            "dataType": "double",
+            "sourceColumn": "Tax Rate",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Total Excluding Tax",
+            "dataType": "double",
+            "sourceColumn": "Total Excluding Tax",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Tax Amount",
+            "dataType": "double",
+            "sourceColumn": "Tax Amount",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Total Including Tax",
+            "dataType": "double",
+            "sourceColumn": "Total Including Tax",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Order",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Fact].[Order].* FROM [Fact].[Order] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Fact].[Order].* FROM [Fact].[Order] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Order"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Fact"
+          }
+        ]
+      },
+      {
+        "name": "Purchase",
+        "columns": [
+          {
+            "name": "Purchase Key",
+            "dataType": "int64",
+            "sourceColumn": "Purchase Key",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "Date Key",
+            "dataType": "dateTime",
+            "sourceColumn": "Date Key",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Supplier Key",
+            "dataType": "int64",
+            "sourceColumn": "Supplier Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Stock Item Key",
+            "dataType": "int64",
+            "sourceColumn": "Stock Item Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Purchase Order ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Purchase Order ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Ordered Outers",
+            "dataType": "int64",
+            "sourceColumn": "Ordered Outers",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Ordered Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Ordered Quantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Received Outers",
+            "dataType": "int64",
+            "sourceColumn": "Received Outers",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Package",
+            "dataType": "string",
+            "sourceColumn": "Package",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Is Order Finalized",
+            "dataType": "boolean",
+            "sourceColumn": "Is Order Finalized",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Purchase",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Fact].[Purchase].* FROM [Fact].[Purchase] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Fact].[Purchase].* FROM [Fact].[Purchase] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Purchase"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Fact"
+          }
+        ]
+      },
+      {
+        "name": "Sale",
+        "columns": [
+          {
+            "name": "Sale Key",
+            "dataType": "int64",
+            "sourceColumn": "Sale Key",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "City Key",
+            "dataType": "int64",
+            "sourceColumn": "City Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Customer Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Bill To Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Bill To Customer Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Stock Item Key",
+            "dataType": "int64",
+            "sourceColumn": "Stock Item Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Invoice Date Key",
+            "dataType": "dateTime",
+            "sourceColumn": "Invoice Date Key",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Delivery Date Key",
+            "dataType": "dateTime",
+            "sourceColumn": "Delivery Date Key",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Salesperson Key",
+            "dataType": "int64",
+            "sourceColumn": "Salesperson Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Invoice ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Invoice ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Package",
+            "dataType": "string",
+            "sourceColumn": "Package",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Unit Price",
+            "dataType": "double",
+            "sourceColumn": "Unit Price",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Tax Rate",
+            "dataType": "double",
+            "sourceColumn": "Tax Rate",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Total Excluding Tax",
+            "dataType": "double",
+            "sourceColumn": "Total Excluding Tax",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Tax Amount",
+            "dataType": "double",
+            "sourceColumn": "Tax Amount",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Profit",
+            "dataType": "double",
+            "sourceColumn": "Profit",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Total Including Tax",
+            "dataType": "double",
+            "sourceColumn": "Total Including Tax",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Total Dry Items",
+            "dataType": "int64",
+            "sourceColumn": "Total Dry Items",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Total Chiller Items",
+            "dataType": "int64",
+            "sourceColumn": "Total Chiller Items",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sale",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Fact].[Sale].* FROM [Fact].[Sale] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Fact].[Sale].* FROM [Fact].[Sale] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Sale"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Fact"
+          }
+        ]
+      },
+      {
+        "name": "Stock Holding",
+        "columns": [
+          {
+            "name": "Stock Holding Key",
+            "dataType": "int64",
+            "sourceColumn": "Stock Holding Key",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "Stock Item Key",
+            "dataType": "int64",
+            "sourceColumn": "Stock Item Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Quantity On Hand",
+            "dataType": "int64",
+            "sourceColumn": "Quantity On Hand",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Bin Location",
+            "dataType": "string",
+            "sourceColumn": "Bin Location",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Last Stocktake Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Last Stocktake Quantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Last Cost Price",
+            "dataType": "double",
+            "sourceColumn": "Last Cost Price",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Reorder Level",
+            "dataType": "int64",
+            "sourceColumn": "Reorder Level",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Target Stock Level",
+            "dataType": "int64",
+            "sourceColumn": "Target Stock Level",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Stock Holding",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Fact].[Stock Holding].* FROM [Fact].[Stock Holding] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Fact].[Stock Holding].* FROM [Fact].[Stock Holding] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Stock Holding"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Fact"
+          }
+        ]
+      },
+      {
+        "name": "Transaction",
+        "columns": [
+          {
+            "name": "Transaction Key",
+            "dataType": "int64",
+            "sourceColumn": "Transaction Key",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "Date Key",
+            "dataType": "dateTime",
+            "sourceColumn": "Date Key",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Customer Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Bill To Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Bill To Customer Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Supplier Key",
+            "dataType": "int64",
+            "sourceColumn": "Supplier Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Transaction Type Key",
+            "dataType": "int64",
+            "sourceColumn": "Transaction Type Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Payment Method Key",
+            "dataType": "int64",
+            "sourceColumn": "Payment Method Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Customer Transaction ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Customer Transaction ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Supplier Transaction ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Supplier Transaction ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Invoice ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Invoice ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "WWI Purchase Order ID",
+            "dataType": "int64",
+            "sourceColumn": "WWI Purchase Order ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Supplier Invoice Number",
+            "dataType": "string",
+            "sourceColumn": "Supplier Invoice Number",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Total Excluding Tax",
+            "dataType": "double",
+            "sourceColumn": "Total Excluding Tax",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Tax Amount",
+            "dataType": "double",
+            "sourceColumn": "Tax Amount",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Total Including Tax",
+            "dataType": "double",
+            "sourceColumn": "Total Including Tax",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Outstanding Balance",
+            "dataType": "double",
+            "sourceColumn": "Outstanding Balance",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Is Finalized",
+            "dataType": "boolean",
+            "sourceColumn": "Is Finalized",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          },
+          {
+            "name": "Lineage Key",
+            "dataType": "int64",
+            "sourceColumn": "Lineage Key",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Transaction",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [Fact].[Transaction].* FROM [Fact].[Transaction] ",
+              "dataSource": "WideWorldImportersDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [Fact].[Transaction].* FROM [Fact].[Transaction] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Transaction"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "Fact"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "d655f11c-8b9b-4b74-ae3b-dbcc07e0c82c",
+        "fromTable": "Sale",
+        "fromColumn": "City Key",
+        "toTable": "City",
+        "toColumn": "City Key"
+      },
+      {
+        "name": "026cb8ac-376d-418d-87d3-f9bbb9f07f83",
+        "fromTable": "Sale",
+        "fromColumn": "Customer Key",
+        "toTable": "Customer",
+        "toColumn": "Customer Key"
+      },
+      {
+        "name": "bb6ee8df-c791-429f-93ed-aebfd9245ebb",
+        "fromTable": "Sale",
+        "fromColumn": "Delivery Date Key",
+        "toTable": "Date",
+        "toColumn": "Date"
+      },
+      {
+        "name": "3c55976c-2ca4-45e6-8d5a-98ab289113df",
+        "fromTable": "Sale",
+        "fromColumn": "Salesperson Key",
+        "toTable": "Employee",
+        "toColumn": "Employee Key"
+      },
+      {
+        "name": "ca077f92-fb44-4953-8fce-3ce9bfeb1be3",
+        "fromTable": "Purchase",
+        "fromColumn": "Date Key",
+        "toTable": "Date",
+        "toColumn": "Date"
+      },
+      {
+        "name": "38e5dbad-f27f-4519-bf0c-e4b86f00eb79",
+        "fromTable": "Purchase",
+        "fromColumn": "Supplier Key",
+        "toTable": "Supplier",
+        "toColumn": "Supplier Key"
+      },
+      {
+        "name": "6b47b61d-0d98-4146-8d1d-bc7b51a1c96e",
+        "fromTable": "Stock Holding",
+        "fromColumn": "Stock Item Key",
+        "toTable": "Stock Item",
+        "toColumn": "Stock Item Key"
+      },
+      {
+        "name": "aab5f757-ec95-40f1-a6c1-18c0ca810ca2",
+        "fromTable": "Transaction",
+        "fromColumn": "Customer Key",
+        "toTable": "Customer",
+        "toColumn": "Customer Key"
+      },
+      {
+        "name": "18bd8779-8fd0-46b7-b49b-bd3ed5a1253d",
+        "fromTable": "Transaction",
+        "fromColumn": "Date Key",
+        "toTable": "Date",
+        "toColumn": "Date"
+      },
+      {
+        "name": "24a65681-907d-4cb1-9bb9-46513a97830f",
+        "fromTable": "Transaction",
+        "fromColumn": "Supplier Key",
+        "toTable": "Supplier",
+        "toColumn": "Supplier Key"
+      },
+      {
+        "name": "e28cd1e1-e206-4c14-ba0e-c932efc89d9b",
+        "fromTable": "Movement",
+        "fromColumn": "Customer Key",
+        "toTable": "Customer",
+        "toColumn": "Customer Key"
+      },
+      {
+        "name": "af38cf8d-6272-4cbe-a14b-7a1c3b67f3ac",
+        "fromTable": "Movement",
+        "fromColumn": "Date Key",
+        "toTable": "Date",
+        "toColumn": "Date"
+      },
+      {
+        "name": "da365551-b287-43af-8eb7-b419b682346d",
+        "fromTable": "Movement",
+        "fromColumn": "Stock Item Key",
+        "toTable": "Stock Item",
+        "toColumn": "Stock Item Key"
+      },
+      {
+        "name": "39519587-7b2d-4793-9dc4-2ac0cae40690",
+        "fromTable": "Movement",
+        "fromColumn": "Supplier Key",
+        "toTable": "Supplier",
+        "toColumn": "Supplier Key"
+      },
+      {
+        "name": "af009072-fdbc-445e-b402-2172b68004a5",
+        "fromTable": "Movement",
+        "fromColumn": "Transaction Type Key",
+        "toTable": "Transaction Type",
+        "toColumn": "Transaction Type Key"
+      },
+      {
+        "name": "dd7e4717-c595-4543-981e-b113d5f3c779",
+        "fromTable": "Transaction",
+        "fromColumn": "Transaction Type Key",
+        "toTable": "Transaction Type",
+        "toColumn": "Transaction Type Key"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
